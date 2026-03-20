@@ -31,7 +31,7 @@ export function LeadsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    get('/api/leads')
+    get('/leads')
       .then((data: Lead[]) => setLeads(data || []))
       .catch(() => setLeads([]))
       .finally(() => setLoading(false));
